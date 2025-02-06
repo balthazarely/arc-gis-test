@@ -1,0 +1,10 @@
+.coordinates {
+  padding: 8px;
+  border-radius: 8px;
+  border: 4px solid rgb(226, 119, 40);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  background-color: white;
+  width: 200px;
+}

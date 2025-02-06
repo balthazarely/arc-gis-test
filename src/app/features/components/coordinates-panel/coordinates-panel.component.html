@@ -1,0 +1,6 @@
+<div *ngIf="clickedCoords$ | async as coords">
+  <div *ngIf="coords.lat && coords.lon" class="coordinates">
+    <div>Lat: {{ coords.lat }}</div>
+    <div>Lon: {{ coords.lon }}</div>
+  </div>
+</div>
