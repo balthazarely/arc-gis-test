@@ -10,6 +10,8 @@ import { routes } from './app.routes';
 import { provideStore } from '@ngrx/store';
 import { mapReducer } from './shared/store/map/map.reducer';
 
+//
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),

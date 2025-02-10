@@ -1,0 +1,10 @@
+.map-container {
+  display: flex;
+  flex: 1 1 0%;
+  height: 100vh;
+
+  &__inner-wrapper {
+    position: relative;
+    flex: 1 1 0%;
+  }
+}

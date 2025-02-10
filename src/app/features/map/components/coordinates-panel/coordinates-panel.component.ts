@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { selectMapCoordinates } from '../../../shared/store/map/map.selector';
+import { selectMapCoordinates } from '../../../../shared/store/map/map.selector';
 import { CommonModule } from '@angular/common';
 
 @Component({
