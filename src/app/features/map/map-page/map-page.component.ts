@@ -94,14 +94,20 @@ export class MapPageComponent {
   }
 
   clearAllPoints = async () => {
-    const query = this.pinFeatureLayer.createQuery();
-    query.where = '1=1';
-    const result = await this.pinFeatureLayer.queryFeatures(query);
+    try {
+      const query = this.pinFeatureLayer.createQuery();
+      query.where = '1=1';
+      const result = await this.pinFeatureLayer.queryFeatures(query);
 
-    if (result.features.length === 0) {
-      console.log('No features to remove');
-      return;
+      if (result.features.length === 0) {
+        console.log('No features to remove');
+        return;
+      }
+      await this.pinFeatureLayer.applyEdits({
+        deleteFeatures: result.features,
+      });
+    } catch (error) {
+      console.error('Error in clearAllPoints:', error);
     }
-    await this.pinFeatureLayer.applyEdits({ deleteFeatures: result.features });
   };
 }
